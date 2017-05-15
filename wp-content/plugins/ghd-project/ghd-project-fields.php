@@ -138,7 +138,7 @@ function ghd_project_meta_save( $post_id ) {
 }
 add_action( 'save_post', 'ghd_project_meta_save' );
 
-
+/* This works as expected but needs work */
 function ghd_load_templates( $original_template ) {
     if ( get_query_var( 'post_type' ) !== 'project' ) {
         //return;
