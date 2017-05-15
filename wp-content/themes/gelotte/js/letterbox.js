@@ -5,7 +5,6 @@ jQuery(document).ready(function() {
     jQuery( '.footer' ).css('max-width', letterbox);
 
     jQuery( '.image-wrapper>img').css('margin-top', setImageVertical());
-    //setImageVertical();
 });
 
 var resizeTimer;
@@ -18,15 +17,12 @@ jQuery(window).resize(function() {
         jQuery( '.footer' ).css('max-width', letterbox);
 
         jQuery( '.image-wrapper>img').css('margin-top', setImageVertical());
-        //setImageVertical();
     }, 300);
 });
 
 function setMaxWidth() {
-    var x = 0;
+    var letterbox;
 
-    var content_width = jQuery('.content').width();
-    var content_height = jQuery('.content').height();
     var document_width = jQuery(document).width();
     var document_height = jQuery(document).height();
 
@@ -35,21 +31,20 @@ function setMaxWidth() {
     var content_padding_left = parseInt(jQuery('.content').css('padding-left'));
     var content_padding_right = parseInt(jQuery('.content').css('padding-right'));
 
-    x = Math.round(( .5 * ( document_width - content_padding_left - content_padding_right ) ) - ( .83 * (document_height - header_height - footer_height)));
-    x = ( x > 0 ? x : 0 );
+    letterbox = Math.round(( .5 * ( document_width - content_padding_left - content_padding_right ) ) - ( .83 * (document_height - header_height - footer_height)));
+    letterbox = ( letterbox > 0 ? letterbox : 0 );
 
-    return document_width - x*2;
+    return document_width - letterbox*2;
 }
 
 function setImageVertical() {
     var content_height = jQuery('.content').height();
     var image_height = jQuery('.image-wrapper>img' ).height();
 
-    //alert('Image height is ' + image_height + '\n\nContent height is ' + content_height);
-
     return ( (content_height - image_height) / 2 );
 }
 
+/*
 function set_correct_image_for_viewport() {
     var document_width = jQuery(document).width();
 
@@ -63,3 +58,4 @@ function set_correct_image_for_viewport() {
         jQuery('.mobile-image>img').toggleClass('active', true).css('visibility', 'visible');
     }
 }
+*/
