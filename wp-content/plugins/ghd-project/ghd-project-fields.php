@@ -137,3 +137,43 @@ function ghd_project_meta_save( $post_id ) {
     }
 }
 add_action( 'save_post', 'ghd_project_meta_save' );
+
+
+function ghd_load_templates( $original_template ) {
+    if ( get_query_var( 'post_type' ) !== 'project' ) {
+        return;
+    }
+
+    if ( is_archive() || is_search() ) {
+
+        if ( file_exists( get_stylesheet_directory(). '/archive-project.php' ) ) {
+
+            return get_stylesheet_directory() . '/archive-project.php';
+
+        } else {
+
+            return plugin_dir_path( __FILE__ ) . 'templates/archive-project.php';
+
+        }
+
+    } elseif(is_singular('project')) {
+
+        if (  file_exists( get_stylesheet_directory(). '/single-project.php' ) ) {
+
+            return get_stylesheet_directory() . '/single-project.php';
+
+        } else {
+
+            return plugin_dir_path( __FILE__ ) . 'templates/single-project.php';
+
+        }
+
+    }else{
+        return get_page_template();
+    }
+
+    return $original_template;
+
+
+}
+add_action( 'template_include', 'ghd_load_templates' );

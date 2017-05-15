@@ -35,11 +35,11 @@ function ghd_register_project() {
         'hierarchical'          => false,
         'has_archive'           => true,
         'query_var'             => true,
-        'capability_type'       => 'page',
+        'capability_type'       => 'post',
         'map_meta_cap'          => true,
         // 'capabilities'          => array(),
         'rewrite'               => array(
-            'slug'                  => 'projects',
+            'slug'                  => 'our-work',
             'with_front'            => true,
             'pages'                 => false,
             'feeds'                 => true
