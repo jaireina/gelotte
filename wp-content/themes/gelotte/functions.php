@@ -14,6 +14,7 @@ function wp_socials_footer_menu() {
 add_action( 'init', 'wp_socials_footer_menu' );
 
 function get_template_name() {
+    global $post;
     $file_name = get_page_template_slug( $post->ID );
     // $withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $filename);
 
@@ -49,7 +50,3 @@ function add_featured_galleries_to_ctp( $post_types ) {
     return $post_types;
 }
 add_filter('fg_post_types', 'add_featured_galleries_to_ctp' );
-
-function paragraph() {
-    echo "<p>Lorem ipsum dolor sit amet, rutrum elit aliquet aenean, convallis luctus rhoncus senectus sit conubia, volutpat ac magna praesent lectus. Amet libero tortor, posuere dictumst morbi purus arcu. Tellus vitae ut vel quis, nec amet, morbi a pretium massa lectus. Peellentesque habitasse at blandit elementum, ipsum pede, nunc pellentesque. Sit blandit erat sed phasellus animi nostra. Aliquam lorem enim lobortis, nec. Habitasse at blandit elementum, ipsum pede, nunc pellentesque. Sit blandit erat sed phasellus animi nostra. Aliquam lorem enim lobortis, nec.</p>";
-}
