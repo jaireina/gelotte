@@ -11,7 +11,7 @@ License: GPL2
 if( !defined('ABSPATH') ) die();
 
 require_once ( plugin_dir_path(__FILE__) . 'ghd-project-cpt.php' );
-require_once ( plugin_dir_path(__FILE__) . 'ghd-project-render-admin.php' );
+//require_once ( plugin_dir_path(__FILE__) . 'ghd-project-render-admin.php' );
 require_once ( plugin_dir_path(__FILE__) . 'ghd-project-fields.php' );
 
 
