@@ -38,8 +38,19 @@ function setMaxWidth() {
 }
 
 function setImageVertical() {
+    var document_width = jQuery(document).width();
     var content_height = jQuery('.content').height();
-    var image_height = jQuery('.image-wrapper>img' ).height();
+    var image_height;
+
+    if ( document_width > 768 ) {
+        image_height = jQuery('.desktop-image>img' ).height();
+        jQuery('.desktop-image').css('visibility', 'visible' );
+        jQuery('.mogile-image').css('visibility', 'hidden' );
+    } else {
+        image_height = jQuery('.mobile-image>img' ).height();
+        jQuery('.mogile-image').css('visibility', 'visible' );
+        jQuery('.desktop-image').css('visibility', 'hidden' );
+    }
 
     return ( (content_height - image_height) / 2 );
 }
