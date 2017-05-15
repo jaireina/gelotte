@@ -43,11 +43,11 @@ function setImageVertical() {
     var image_height;
 
     if ( document_width > 768 ) {
-        image_height = jQuery('.desktop-image>img' ).height();
         jQuery('mobile-image').remove();
+        image_height = jQuery('.desktop-image>img' ).height();
     } else {
-        image_height = jQuery('.mobile-image>img' ).height();
         jQuery('desktop-image').remove();
+        image_height = jQuery('.mobile-image>img' ).height();
     }
 
     return ( (content_height - image_height) / 2 );
