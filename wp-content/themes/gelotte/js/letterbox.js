@@ -38,24 +38,17 @@ function setMaxWidth() {
 }
 
 function setImageVertical() {
+    var document_width = jQuery(document).width();
     var content_height = jQuery('.content').height();
-    var image_height = jQuery('.image-wrapper>img' ).height();
+    var image_height;
+
+    if ( document_width > 768 ) {
+        image_height = jQuery('.desktop-image>img' ).height();
+        jQuery('mobile-image').remove();
+    } else {
+        image_height = jQuery('.mobile-image>img' ).height();
+        jQuery('desktop-image').remove();
+    }
 
     return ( (content_height - image_height) / 2 );
 }
-
-/*
-function set_correct_image_for_viewport() {
-    var document_width = jQuery(document).width();
-
-    if ( document_width  > 768 ) {
-        jQuery('.desktop-image>img').toggleClass('active', true).css('visibility', 'visible');
-        jQuery('.mobile-image>img').toggleClass('active', false).css('visibility', 'hidden');
-
-
-    } else {
-        jQuery('.desktop-image>img').toggleClass('active', false).css('visibility', 'hidden');
-        jQuery('.mobile-image>img').toggleClass('active', true).css('visibility', 'visible');
-    }
-}
-*/
