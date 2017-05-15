@@ -1,0 +1,126 @@
+/* Sidebar Menu styles
+-------------------------------------------------- */
+.cbp-spmenu {
+    background: #515254;
+    position: fixed;
+}
+
+.cbp-spmenu a {
+    display: block;
+    color: @white !important;
+    background-color: none !important;
+    text-transform: uppercase !important;
+    font-size: 14px !important;
+    border-style: none !important;
+    letter-spacing: .292em !important;
+    text-decoration: none !important;
+
+}
+
+.cbp-spmenu ul {
+    list-style: none !important;
+    width: 100%;
+    padding-left: 55px;
+    display: inline-block;
+}
+.cbp-spmenu li {
+    list-style: none !important;
+    float: left !important;
+    margin-bottom: 40px;
+}
+.cbp-spmenu a {
+    padding-left: 0px !important;
+}
+.cbp-spmenu a:hover {
+
+}
+
+.cbp-spmenu a:active {
+
+}
+
+.cbp-spmenu-vertical {
+    padding-top: 102px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+.cbp-spmenu-vertical a {
+
+}
+
+.sidebar-socials ul {
+    padding-left: 50px;
+  text-align: left !important;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+    width: 222px;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+    color: @white;
+}
+
+/* Vertical menu that slides from the right */
+
+.cbp-spmenu-right {
+    right: -222px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+    right: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+}
+
+.cbp-spmenu-push-toleft {
+    left: -222px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Example media queries */
+ul.side-menu {
+    margin-bottom: 0px;
+}
+
+.sidebar-socials {
+    height: 16px;
+  margin-top: -6px;
+}
+li.cn-fa-icon a {
+    padding: 0px !important;
+}
+.sidebar-socials > ul.cnss-social-icon li.cn-fa-icon {
+    height: 16px;
+    width: 16px;
+}
+.sidebar-socials > ul.cnss-social-icon li.cn-fa-icon a {
+    height: 16px;
+    width: 16px;
+    margin-top: 0 !important;
+    background-color: @white !important;
+
+}
+.sidebar-socials > ul.cnss-social-icon li.cn-fa-icon a i {
+    color: #515254;
+    padding-top: 2px;
+    padding-left: 4px;
+}

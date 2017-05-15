@@ -1,0 +1,46 @@
+/*
+@media print {}
+@media (min-width: @phone-width) {}
+@media (max-width: 767px) {}
+@media screen and (max-width: 767px) {}
+@media screen and (min-width: @phone-width) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {}
+@media (max-device-width: 480px) and (orientation: landscape) {}
+
+
+@media (min-width: @phone-width) and (max-width: 991px) {}
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+
+@media screen and (max-width: 357px) {}
+*/
+
+/* Media less than or equal to 992px */
+@media (max-width: @tablet-width) {
+  .content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    bottom: 50px;
+  }
+}
+
+/* Media less than or equal to 768px */
+@media screen and (max-width: @phone-width) {
+  .content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    bottom: 25px;
+    top: 150px;
+  }
+}
