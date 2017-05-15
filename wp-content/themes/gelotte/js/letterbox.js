@@ -44,29 +44,11 @@ function setImageVertical() {
 
     if ( document_width > 768 ) {
         image_height = jQuery('.desktop-image>img' ).height();
-        jQuery('.desktop-image').css('visibility', 'visible' );
-        jQuery('.mogile-image').css('visibility', 'hidden' );
+        jQuery('mobile-image').remove();
     } else {
         image_height = jQuery('.mobile-image>img' ).height();
-        jQuery('.mogile-image').css('visibility', 'visible' );
-        jQuery('.desktop-image').css('visibility', 'hidden' );
+        jQuery('desktop-image').remove();
     }
 
     return ( (content_height - image_height) / 2 );
 }
-
-/*
-function set_correct_image_for_viewport() {
-    var document_width = jQuery(document).width();
-
-    if ( document_width  > 768 ) {
-        jQuery('.desktop-image>img').toggleClass('active', true).css('visibility', 'visible');
-        jQuery('.mobile-image>img').toggleClass('active', false).css('visibility', 'hidden');
-
-
-    } else {
-        jQuery('.desktop-image>img').toggleClass('active', false).css('visibility', 'hidden');
-        jQuery('.mobile-image>img').toggleClass('active', true).css('visibility', 'visible');
-    }
-}
-*/
