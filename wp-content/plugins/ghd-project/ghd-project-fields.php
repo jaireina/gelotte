@@ -141,7 +141,7 @@ add_action( 'save_post', 'ghd_project_meta_save' );
 
 function ghd_load_templates( $original_template ) {
     if ( get_query_var( 'post_type' ) !== 'project' ) {
-        return;
+        //return;
     }
 
     if ( is_archive() || is_search() ) {
