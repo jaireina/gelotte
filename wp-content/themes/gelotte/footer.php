@@ -6,6 +6,8 @@
  */
 ?>
 
+                </div><!--.site-content-->
+
                 <footer class="footer">
                     <div class="container"></div>
                         <div id="footer-row" class="row site-footer">

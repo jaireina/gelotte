@@ -33,6 +33,4 @@ get_header();
         <?php get_template_part('no-results', 'index'); ?>
     <?php } // endif; ?>
 
-    </div>
-
 <?php get_footer(); ?>
