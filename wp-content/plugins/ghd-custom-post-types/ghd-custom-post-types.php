@@ -25,7 +25,10 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+/* Custom Post Types */
 function ghd_custom_post_types() {
+
+    /* Custom Project Type */
 
     $project_plural = 'Projects';
     $project_singular = 'Project';
@@ -60,9 +63,31 @@ function ghd_custom_post_types() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
-        'supports'           => array( 'title', 'revisions' )
+        'supports'           => array( 'title', 'revisions' ),
         // ( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats' )
+        'taxonomies'            => array( 'post_tag')
     );
     register_post_type( 'project', $args );
 }
 add_action( 'init', 'ghd_custom_post_types' );
+
+// Flush rewrite rules to add permalink slugs
+function ghd_rewrite_flush() {
+    ghd_custom_post_types();
+    flush_rewrite_rules();
+}
+register_activation_hook( __FILE__, 'ghd_rewrite_flush' );
+
+/* Custom Taxonomies */
+function ghd_custom_taxonomies() {
+    register_taxonomy(
+        'Project Taxonomy',
+        'project',
+        array(
+            'label' => __( 'Type of Project' ),
+            'rewrite' => array( 'slug' => 'product-type' ),
+            'hierarchical' => true,
+        )
+    );
+}
+add_action ( 'init', 'ghd_custom_taxonomies' );
