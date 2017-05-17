@@ -30,24 +30,24 @@ function ghd_custom_post_types() {
 
     /* Custom Project Type */
 
-    $project_plural = 'Projects';
-    $project_singular = 'Project';
+    $plural_name = 'Projects';
+    $singular_name = 'Project';
     
     $labels = array(
-        'name'               => $project_plural,
-        'singular_name'      => $project_singular,
-        'menu_name'          => $project_plural,
-        'name_admin_bar'     => $project_singular,
+        'name'               => $plural_name,
+        'singular_name'      => $singular_name,
+        'menu_name'          => $plural_name,
+        'name_admin_bar'     => $singular_name,
         'add_new'            => 'Add New',
-        'add_new_item'       => 'Add New ' . $project_singular,
-        'new_item'           => 'New ' . $project_singular,
-        'edit_item'          => 'Edit ' . $project_singular,
-        'view_item'          => 'View ' . $project_singular,
-        'all_items'          => 'All ' .$project_plural,
-        'search_items'       => 'Search ' . $project_plural,
-        'parent_item_colon'  => 'Parent ' . $project_plural .'\'',
-        'not_found'          => 'No ' . $project_plural . ' found.',
-        'not_found_in_trash' => 'No ' . $project_plural . ' found in Trash.',
+        'add_new_item'       => 'Add New ' . $singular_name,
+        'new_item'           => 'New ' . $singular_name,
+        'edit_item'          => 'Edit ' . $singular_name,
+        'view_item'          => 'View ' . $singular_name,
+        'all_items'          => 'All ' .$plural_name,
+        'search_items'       => 'Search ' . $plural_name,
+        'parent_item_colon'  => 'Parent ' . $plural_name .'\'',
+        'not_found'          => 'No ' . $plural_name . ' found.',
+        'not_found_in_trash' => 'No ' . $plural_name . ' found in Trash.',
     );
 
     $args = array(
@@ -65,7 +65,7 @@ function ghd_custom_post_types() {
         'menu_position'      => 5,
         'supports'           => array( 'title', 'revisions' ),
         // ( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats' )
-        'taxonomies'            => array( 'post_tag')
+        'taxonomies'            => array()
     );
     register_post_type( 'project', $args );
 }
@@ -80,14 +80,105 @@ register_activation_hook( __FILE__, 'ghd_rewrite_flush' );
 
 /* Custom Taxonomies */
 function ghd_custom_taxonomies() {
-    register_taxonomy(
-        'Project Taxonomy',
-        'project',
-        array(
-            'label' => __( 'Type of Project' ),
-            'rewrite' => array( 'slug' => 'product-type' ),
-            'hierarchical' => true,
-        )
+
+    /* Type of Project categories */
+
+    $plural_name = 'Types of Projects';
+    $singular_name = 'Type of Project';
+
+    $labels = array(
+        'name'              => $plural_name,
+        'singular_name'     => $singular_name,
+        'search_items'      => 'Search ' . $plural_name,
+        'all_items'         => 'All ' . $plural_name,
+        'parent_item'       => 'Parent ' . $singular_name,
+        'parent_item_colon' => 'Parent ' . $singular_name . ':',
+        'edit_item'         => 'Edit ' . $singular_name,
+        'update_item'       => 'Update ' . $singular_name,
+        'add_new_item'      => 'Add New ' . $singular_name,
+        'new_item_name'     => 'New ' . $singular_name,
+        'menu_name'         => $singular_name
     );
+
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'project-types' ),
+    );
+
+    register_taxonomy( 'project-types', array( 'project' ), $args );
+
+    /* Project architect tags (non-hierarchical) */
+
+    $plural_name = 'Project Architects';
+    $singular_name = 'Project Architect';
+
+
+    $labels = array(
+        'name'              => $plural_name,
+        'singular_name'     => $singular_name,
+        'search_items'      => 'Search ' . $plural_name,
+        'all_items'         => 'All ' . $plural_name,
+        'parent_item'       => 'Parent ' . $singular_name,
+        'parent_item_colon' => 'Parent ' . $singular_name . ':',
+        'edit_item'         => 'Edit ' . $singular_name,
+        'update_item'       => 'Update ' . $singular_name,
+        'add_new_item'      => 'Add New ' . $singular_name,
+        'new_item_name'     => 'New ' . $singular_name,
+        'menu_name'         => $singular_name
+    );
+
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'project-architects' ),
+    );
+
+    register_taxonomy( 'project-architects', array( 'project' ), $args );
+
+    /* Type of Project tags (non-hierarchical) */
+
+    $plural_name = 'Project Tags';
+    $singular_name = 'Project Tag';
+
+
+    $labels = array(
+        'name'                       => $plural_name,
+        'singular_name'              => $singular_name,
+        'search_items'               => 'Search Moods',
+        'popular_items'              => 'Popular Moods',
+        'all_items'                  => 'All Moods',
+        'parent_item'                => null,
+        'parent_item_colon'          => null,
+        'edit_item'                  => 'Edit ' . $singular_name,
+        'update_item'                => 'Update ' . $singular_name,
+        'add_new_item'               => 'Add New  ' . $singular_name,
+        'new_item_name'              => 'New '  . $singular_name . ' Name',
+        'separate_items_with_commas' => 'Separate ' . $plural_name . ' with commas',
+        'add_or_remove_items'        => 'Add or remove ' . $plural_name,
+        'choose_from_most_used'      => 'Choose from the most used ' . $plural_name,
+        'not_found'                  => 'No ' . $plural_name . ' found.',
+        'menu_name'                  => $plural_name,
+    );
+
+    $args = array(
+        'hierarchical'          => false,
+        'labels'                => $labels,
+        'show_ui'               => true,
+        'show_admin_column'     => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var'             => true,
+        'rewrite'               => array( 'slug' => $plural_name ),
+    );
+
+    register_taxonomy( 'project-tags', array( 'project' ), $args );
+
+
 }
 add_action ( 'init', 'ghd_custom_taxonomies' );
