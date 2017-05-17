@@ -23,19 +23,18 @@ if( $images ): ?>
         <ul class="slides">
             <?php foreach( $images as $image ): ?>
                 <li>
-                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" style="height: 300px;" />
+                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" style="height: 500px;" />
                 </li>
             <?php endforeach; ?>
         </ul>
     </div>
 
-    <ul>
+    <ul class="list-inline">
         <?php foreach( $images as $image ): ?>
             <li>
                 <a href="<?php echo $image['url']; ?>">
-                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" style="width: 75px; height: 75px;"/>
                 </a>
-                <p><?php echo $image['caption']; ?></p>
             </li>
         <?php endforeach; ?>
     </ul>
