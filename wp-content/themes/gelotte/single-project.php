@@ -13,32 +13,86 @@ get_header();
 $main_column_size = bootstrapBasicGetMainColumnSize();
 ?>
 
-    <?php
-
-    $images = get_field('desktop_gallery');
-
-    if( $images ): ?>
-
-        <div id="carousel" class="flexslider" >
-            <ul class="slides">
-                <?php foreach( $images as $image ): ?>
-                    <li>
-                        <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" style="height: 500px;" />
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-
-        <ul class="list-inline">
-            <?php foreach( $images as $image ): ?>
-                <li>
-                    <a href="<?php echo $image['url']; ?>">
-                        <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" style="width: 75px; height: 75px;"/>
-                    </a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-
-    <?php endif; ?>
+<!-- Place somewhere in the <body> of your page -->
+<div id="slider" class="flexslider">
+    <ul class="slides">
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide01.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide02.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide03.jpg" />>
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide04.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide05.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide06.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide07.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide08.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide09.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide10.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide11.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide12.jpg" />
+        </li>
+        <!-- items mirrored twice, total of 12 -->
+    </ul>
+</div>
+<div id="carousel" class="flexslider">
+    <ul class="slides">
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide01.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide02.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide03.jpg" />>
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide04.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide05.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide06.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide07.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide08.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide09.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide10.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide11.jpg" />
+        </li>
+        <li>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide12.jpg" />
+        </li>
+</div>
 
 <?php get_footer(); ?> 
