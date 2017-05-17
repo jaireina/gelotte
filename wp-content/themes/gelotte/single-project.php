@@ -10,34 +10,37 @@ get_header();
 /**
  * determine main column size from actived sidebar
  */
-$main_column_size = bootstrapBasicGetMainColumnSize();
+// $main_column_size = bootstrapBasicGetMainColumnSize();
 ?>
-<h1>Gelotte Single Project</h1>
-<?php get_sidebar('left'); ?> 
-				<div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
-					<main id="main" class="site-main" role="main">
-						<?php 
-						while (have_posts()) {
-							the_post();
 
-							get_template_part('content', get_post_format());
+<?php
 
-							echo "\n\n";
-							
-							bootstrapBasicPagination();
+$images = get_field('desktop_gallery');
 
-							echo "\n\n";
-							
-							// If comments are open or we have at least one comment, load up the comment template
-							if (comments_open() || '0' != get_comments_number()) {
-								comments_template();
-							}
+if( $images ): ?>
 
-							echo "\n\n";
+    <div id="carousel" class="flexslider" >
+        <ul class="slides">
+            <?php foreach( $images as $image ): ?>
+                <li>
+                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" style="height: 300px;" />
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
 
-						} //endwhile;
-						?> 
-					</main>
-				</div>
+    <ul>
+        <?php foreach( $images as $image ): ?>
+            <li>
+                <a href="<?php echo $image['url']; ?>">
+                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                </a>
+                <p><?php echo $image['caption']; ?></p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+<?php endif; ?>
+
 <?php get_sidebar('right'); ?> 
 <?php get_footer(); ?> 

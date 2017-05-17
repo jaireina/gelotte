@@ -24,10 +24,6 @@
     <!--wordpress head-->
     <?php wp_head(); ?>
 
-    <script type="text/javascript">
-
-    </script>
-
 </head>
 
 <body <?php body_class(); ?>>
