@@ -33,6 +33,7 @@ function ghd_add_scripts() {
     wp_register_script('Letterbox', get_stylesheet_directory_uri() . '/js/letterbox.js', array('jquery'), '1.0');
     wp_enqueue_script('Letterbox');
 
+
     wp_register_script('jQuery-flexslider', get_stylesheet_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '2.6.3');
     wp_enqueue_script('jQuery-flexslider');
     wp_register_script('flexslider-load', get_stylesheet_directory_uri() . '/js/flexsliderLoad.js', array('jquery'), '1.0.0');
@@ -40,6 +41,7 @@ function ghd_add_scripts() {
 
     wp_register_style( 'flexslider-styles', get_stylesheet_directory_uri() . '/css/flexslider.css' );
     wp_enqueue_style( 'flexslider-styles' );
+
 
 }
 add_action( 'wp_enqueue_scripts', 'ghd_add_scripts' );
