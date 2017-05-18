@@ -60,7 +60,7 @@ get_header();
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide02.jpg" />
             </li>
             <li>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide03.jpg" />>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide03.jpg" />
             </li>
             <li>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide04.jpg" />
