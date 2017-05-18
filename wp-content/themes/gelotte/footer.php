@@ -6,10 +6,10 @@
  */
 ?>
 
-                </div><!--.site-content-->
+                </div><!-- End content -->
 
                 <footer class="footer">
-                    <div class="container"></div>
+                    <div class="container">
                         <div id="footer-row" class="row site-footer">
 
                             <div class="site-description">
@@ -24,18 +24,17 @@
                     </div>
                 </footer>
 
-            </div><!-- end container -->
-
-            <!--wordpress footer-->
+            <!-- Wordpress Footer-->
             <?php wp_footer(); ?>
 
-<!--call jPushMenu, required-->
+            <!--call jPushMenu, required-->
             <script>
                 jQuery(document).ready(function($) {
                     $('.toggle-menu').jPushMenu();
                 });
             </script>
 
-        </div>
+        </div><!-- End id="wrapper" -->
+
     </body>
 </html>

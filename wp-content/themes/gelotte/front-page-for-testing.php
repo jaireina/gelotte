@@ -7,9 +7,17 @@
 
 get_header();
 
+/**
+ * determine main column size from actived sidebar
+ */
+// $main_column_size = bootstrapBasicGetMainColumnSize();
 ?>
 
+                <!-- End HEADER TEMPLATE SECTION -->
+
                     <!-- Begin Content -->
+
+                    <!-- THIS AREA TO BE USED FOR TESTING PURPOSES -->
                     <div id="top-content-wrapper">
 
                         <div class="crop-wrapper">
@@ -32,6 +40,8 @@ get_header();
                     <div id="bottom-content-wrapper">
 
                     </div><!-- End Bottom Content Wrapper -->
+
+                    <!-- THIS AREA TO BE USED FOR TESTING PURPOSES -->
 
                 <!-- BEGIN FOOTER TEMPLATE SECTION -->
                 <?php get_footer(); ?>

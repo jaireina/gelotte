@@ -37,10 +37,10 @@
         <div class="sidebar-socials">
             <?php get_social_icons(); ?>
         </div>
-    </nav>
+    </nav> <!-- End sidebar right menu -->
 
-    <!-- Begin page content -->
     <div class="container">
+        <!-- Begin Navigation Section -->
         <header role="banner">
             <div class="row site-branding">
                 <div class="row main-navigation">
@@ -74,6 +74,6 @@
                     </div>
                 </div><!--.main-navigation-->
             </div>
-        </header>
+        </header><!-- End header section -->
 
         <div class="content">

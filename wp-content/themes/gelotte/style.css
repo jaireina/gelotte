@@ -20,23 +20,43 @@ html {
   overflow-x: hidden;
 }
 body {
-  height: 200vh;
   background-color: #e2e3e4;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   overflow: hidden;
 }
-#top-content-wrapper {
+.page-template-front-page {
+  height: 100vh;
+}
+.page-template-front-page #top-content-wrapper {
+  position: relative;
+  top: 0;
+  height: 100%;
+}
+.page-template-front-page #middle-content-wrapper {
+  height: 0;
+  background-color: yellow;
+}
+.page-template-front-page #bottom-content-wrapper {
+  position: relative;
+  bottom: 0;
+  height: 0;
+  background-color: red;
+}
+.single-project {
+  height: 200vh;
+}
+.single-project #top-content-wrapper {
   position: relative;
   top: 0;
   height: 45%;
 }
-#middle-content-wrapper {
+.single-project #middle-content-wrapper {
   height: 5%;
   background-color: yellow;
 }
-#bottom-content-wrapper {
+.single-project #bottom-content-wrapper {
   position: relative;
   bottom: 0;
   height: 50%;
