@@ -100,8 +100,12 @@
 
                         </div><!-- End Top Content Wrapper -->
 
+                        <div id="middle-content-wrapper">
+
+                        </div><!-- End Middle Content Wrapper -->
+
                         <div id="bottom-content-wrapper">
-                            <h3 style="text-align: center; margin-top: 30px; border: dotted 1px grey;">THIS IS THE BOTTOM CONTENT WRAPPER</h3>
+
                         </div><!-- End Bottom Content Wrapper -->
 
                         <!-- THIS AREA TO BE USED FOR TESTING PURPOSES -->
