@@ -231,6 +231,14 @@ div.image-wrapper > img {
 .mobile-image {
   overflow: hidden;
 }
+.flex-caption {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+}
 /* Footer styles
 -------------------------------------------------- */
 .footer {

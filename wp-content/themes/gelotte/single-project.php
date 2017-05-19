@@ -24,10 +24,11 @@ get_header();
                             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                         </div>
                     </li>
-                 <?php endforeach; ?>
+                <?php endforeach; ?>
             </ul>
-         </div>
+        </div>
     <?php endif; ?>
+
 
     <?php
 
@@ -41,6 +42,7 @@ get_header();
                         <div class="image-wrapper mobile-image">
                             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                         </div>
+                        <p class="flex-caption">< swipe for images ></p>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -50,6 +52,21 @@ get_header();
 </div><!-- End Top Content Wrapper -->
 
 <div id="middle-content-wrapper">
+    <?php
+
+    $images = get_field('desktop_gallery');
+
+    if( $images ): ?>
+        <div class="desktop-image">
+            <ul class="list-inline">
+                <?php foreach( $images as $image ): ?>
+                    <li>
+                        <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" style="height: 75px; width: 75px;"/>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    <?php endif; ?>
 
 </div><!-- End Middle Content Wrapper -->
 

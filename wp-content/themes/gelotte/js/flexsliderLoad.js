@@ -4,7 +4,7 @@ jQuery(window).load(function() {
         animation: 'slide',
         animationLoop: true,
         pauseOnHover: true,
-        controlNav: false,
+        controlNav: 'thumbnails',
         directionNav: true,
         touch: true
     });
