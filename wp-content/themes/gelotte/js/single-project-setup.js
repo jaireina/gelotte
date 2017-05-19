@@ -6,3 +6,5 @@ function setProjectTopWrapper() {
 
     jQuery( '#top-content-wrapper' ).css( 'height' , ( viewport_height - header_height ) );
 }
+
+jQuery(window).resize(function(){location.reload();});

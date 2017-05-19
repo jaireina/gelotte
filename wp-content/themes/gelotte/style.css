@@ -211,8 +211,8 @@ button.navbar-toggle.toggle-menu.menu-right.push-body.jPushMenuBtn span {
   height: 100%;
 }
 .wide-wrapper {
-  left: -200%;
   position: relative;
+  left: -200%;
   text-align: center;
   width: 500%;
   vertical-align: middle;

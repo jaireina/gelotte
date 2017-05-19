@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
         jQuery( '.footer' ).css('max-width', letterbox);
 
         jQuery( '.image-wrapper>img').css('margin-top', setImageVertical());
-    }, 300);
+    }, 500);
 });
 
 jQuery(window).resize(function() {
@@ -22,14 +22,14 @@ jQuery(window).resize(function() {
         jQuery( '.footer' ).css('max-width', letterbox);
 
         jQuery( '.image-wrapper>img').css('margin-top', setImageVertical());
-    }, 300);
+    }, 500);
 });
 
 function setMaxWidth() {
     var letterbox;
 
     var document_width = jQuery(document).width();
-    var document_height = jQuery(document).height();
+    var window_height = jQuery(window).height();
 
     var top_content_wrapper_height = jQuery('#top-content-wrapper').height();
 
@@ -38,10 +38,8 @@ function setMaxWidth() {
     var content_padding_left = parseInt(jQuery('.content').css('padding-left'));
     var content_padding_right = parseInt(jQuery('.content').css('padding-right'));
 
-    letterbox = Math.round(( .5 * ( document_width - content_padding_left - content_padding_right ) ) - ( .83 * ( top_content_wrapper_height /* document_height - header_height - footer_height _*/ ) ) );
+    letterbox = Math.round(( .5 * ( document_width - content_padding_left - content_padding_right ) ) - ( .83 * ( window_height - header_height - footer_height ) ) );
     letterbox = ( letterbox > 0 ? letterbox : 0 );
-
-    //alert( 'The top content wrapper height is ' + top_content_wrapper_height + '\nThe content section height is ' + (document_height - header_height - footer_height));
 
     return document_width - letterbox*2;
 }
@@ -52,7 +50,7 @@ function setImageVertical() {
     if ( typeof setProjectTopWrapper !== 'undefined' && jQuery( window.setProjectTopWrapper ) ) {
         setProjectTopWrapper();
     }
-    // var content_height = jQuery('.content').height();
+
     var top_content_wrapper_height = jQuery('#top-content-wrapper').height();
     var image_height;
 
@@ -66,5 +64,7 @@ function setImageVertical() {
         image_height = jQuery('.mobile-image>img' ).height();
     }
 
-    return ( ( /* content_height */ top_content_wrapper_height - image_height ) / 2 );
+    return ( ( top_content_wrapper_height - image_height ) / 2 );
 }
+
+//jQuery(window).resize(function(){location.reload();});

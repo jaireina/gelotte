@@ -16,24 +16,34 @@ get_header();
     $images = get_field('desktop_gallery');
 
     if( $images ): ?>
-        <div id="slider" class="flexslider">
-            <div class="crop-wrapper">
-                <div class="wide-wrapper">
-                    <ul class="slides">
+        <div id="slider" class="flexslider desktop-image">
+            <ul class="slides">
+                <?php foreach( $images as $image ): ?>
+                    <li>
+                        <div class="image-wrapper desktop-image">
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        </div>
+                    </li>
+                 <?php endforeach; ?>
+            </ul>
+         </div>
+    <?php endif; ?>
 
-                        <?php foreach( $images as $image ): ?>
-                            <li>
+    <?php
 
-                                    <div class="image-wrapper desktop-image">
-                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                                    </div>
+    $images = get_field('mobile_gallery');
 
-                            </li>
-                        <?php endforeach; ?>
-
-                    </ul>
-                </div>
-            </div>
+    if( $images ): ?>
+        <div id="slider" class="flexslider mobile-image">
+            <ul class="slides">
+                <?php foreach( $images as $image ): ?>
+                    <li>
+                        <div class="image-wrapper mobile-image">
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
         </div>
     <?php endif; ?>
 
