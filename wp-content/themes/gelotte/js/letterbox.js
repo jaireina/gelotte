@@ -1,3 +1,4 @@
+
 var resizeTimer;
 
 jQuery(document).ready(function() {
@@ -47,6 +48,10 @@ function setMaxWidth() {
 
 function setImageVertical() {
     var document_width = jQuery(document).width();
+
+    if ( typeof setProjectTopWrapper !== 'undefined' && jQuery( window.setProjectTopWrapper ) ) {
+        setProjectTopWrapper();
+    }
     // var content_height = jQuery('.content').height();
     var top_content_wrapper_height = jQuery('#top-content-wrapper').height();
     var image_height;

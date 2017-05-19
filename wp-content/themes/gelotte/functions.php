@@ -40,6 +40,8 @@ function ghd_add_scripts() {
             wp_enqueue_script('jQuery-flexslider');
             wp_register_script('flexslider-load', get_stylesheet_directory_uri() . '/js/flexsliderLoad.js', array('jquery'), '1.0.0');
             wp_enqueue_script('flexslider-load');
+            wp_register_script('single-project-setup', get_stylesheet_directory_uri() . '/js/single-project-setup.js', array('jquery'), '0.1');
+            wp_enqueue_script('single-project-setup');
 
             wp_register_style( 'flexslider-styles', get_stylesheet_directory_uri() . '/css/flexslider.css' );
             wp_enqueue_style( 'flexslider-styles' );
