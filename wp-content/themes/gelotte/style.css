@@ -35,7 +35,7 @@ body {
   height: 100%;
 }
 .page-template-front-page #middle-content-wrapper {
-  height: 0;
+  height: 0px;
   background-color: yellow;
 }
 .page-template-front-page #bottom-content-wrapper {

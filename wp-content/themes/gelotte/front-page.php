@@ -25,10 +25,6 @@ get_header();
 
                     </div><!-- End Top Content Wrapper -->
 
-                    <div id="middle-content-wrapper">
-
-                    </div><!-- End Middle Content Wrapper -->
-
                     <div id="bottom-content-wrapper">
 
                     </div><!-- End Bottom Content Wrapper -->
