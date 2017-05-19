@@ -20,7 +20,13 @@ get_header();
             <ul>
                 <?php foreach( $images as $image ): ?>
                     <li>
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        <div class="crop-wrapper">
+                            <div class="wide-wrapper">
+                                <div class="image-wrapper desktop-image">
+                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 <?php endforeach; ?>
             </ul>
