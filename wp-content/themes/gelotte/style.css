@@ -34,10 +34,6 @@ body {
   top: 0;
   height: 100%;
 }
-.page-template-front-page #middle-content-wrapper {
-  height: 0px;
-  background-color: yellow;
-}
 .page-template-front-page #bottom-content-wrapper {
   position: relative;
   bottom: 0;
@@ -52,14 +48,9 @@ body {
   top: 0;
   overflow: hidden;
 }
-.single-project #middle-content-wrapper {
-  height: 75px;
-  background-color: yellow;
-}
 .single-project #bottom-content-wrapper {
   position: relative;
   bottom: 0;
-  height: 300px;
   background-color: red;
 }
 #wrapper {
@@ -200,10 +191,6 @@ button.navbar-toggle.toggle-menu.menu-right.push-body.jPushMenuBtn span {
   overflow: hidden;
   background-color: #ffffff;
 }
-/* TESTING */
-.testing p {
-  border: dashed 1px black;
-}
 .crop-wrapper {
   overflow: hidden;
   position: relative;
@@ -226,6 +213,10 @@ img.image-wrapper {
 }
 div.image-wrapper > img {
   margin-top: 122px;
+}
+.slider-thumbs {
+  margin-top: -400px;
+  z-index: 40000;
 }
 .desktop-image,
 .mobile-image {
@@ -286,6 +277,10 @@ a.unslider-arrow.prev {
 }
 a.unslider-arrow.next {
   display: none;
+}
+.unslider-nav {
+  position: absolute;
+  top: -30px;
 }
 nav.unslider-nav ol li {
   display: none;

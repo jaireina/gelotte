@@ -31,6 +31,7 @@ get_header();
                     </li>
                 <?php endforeach; ?>
             </ul>
+            <div class="slider-thumbs" style="height: 80px; width: 100%; background-color: grey;" ><h1>Slider Thumbs</h1></div>
         </div>
 
         <div class="the-mobile-slider mobile-image">
@@ -49,7 +50,6 @@ get_header();
             </ul>
         </div>
     <?php endif; ?>
-    <div class="slider-thumbs" style="height: 80px; width: 100%; background-color: grey;" ><h1>Slider Thumbs</h1></div>
 
 </div><!-- End Top Content Wrapper -->
 
