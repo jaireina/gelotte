@@ -16,33 +16,10 @@ get_header();
     $images = get_field('desktop_gallery');
 
     if( $images ): ?>
-        <div id="slider" class="flexslider desktop-image">
-            <ul class="slides">
+            <ul>
                 <?php foreach( $images as $image ): ?>
                     <li>
-                        <div class="image-wrapper desktop-image">
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                        </div>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    <?php endif; ?>
-
-
-    <?php
-
-    $images = get_field('mobile_gallery');
-
-    if( $images ): ?>
-        <div id="slider" class="flexslider mobile-image">
-            <ul class="slides">
-                <?php foreach( $images as $image ): ?>
-                    <li>
-                        <div class="image-wrapper mobile-image">
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                        </div>
-                        <p class="flex-caption">< swipe for images ></p>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -52,21 +29,6 @@ get_header();
 </div><!-- End Top Content Wrapper -->
 
 <div id="middle-content-wrapper">
-    <?php
-
-    $images = get_field('desktop_gallery');
-
-    if( $images ): ?>
-        <div class="desktop-image">
-            <ul class="list-inline">
-                <?php foreach( $images as $image ): ?>
-                    <li>
-                        <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" style="height: 75px; width: 75px;"/>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    <?php endif; ?>
 
 </div><!-- End Middle Content Wrapper -->
 

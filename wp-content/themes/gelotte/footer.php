@@ -34,6 +34,14 @@
                 });
             </script>
 
+            <script>
+                jQuery(document).ready(function($) {
+                    $('.the-slider').unslider();
+                });
+            </script>
+
+
+
         </div><!-- End id="wrapper" -->
 
     </body>

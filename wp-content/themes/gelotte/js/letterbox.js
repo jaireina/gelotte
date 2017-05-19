@@ -66,5 +66,3 @@ function setImageVertical() {
 
     return ( ( top_content_wrapper_height - image_height ) / 2 );
 }
-
-//jQuery(window).resize(function(){location.reload();});
