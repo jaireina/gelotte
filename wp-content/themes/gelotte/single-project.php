@@ -13,17 +13,34 @@ get_header();
 
     <?php
 
-    $images = get_field('desktop_gallery');
+    $desktop_images = get_field('desktop_gallery');
+    $mobile_images = get_field('mobile_gallery');
 
-    if( $images ): ?>
-        <div class="the-slider">
-            <ul>
-                <?php foreach( $images as $image ): ?>
+    if( $desktop_images ): ?>
+        <div class="the-desktop-slider desktop-image">
+            <ul class="desktop-image">
+                <?php foreach( $desktop_images as $desktop_image ): ?>
                     <li>
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="image-wrapper desktop-image">
-                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <img src="<?php echo $desktop_image['url']; ?>" alt="<?php echo $desktop_image['alt']; ?>" />
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+
+        <div class="the-mobile-slider mobile-image">
+            <ul class="mobile-image">
+                <?php foreach( $mobile_images as $mobile_image ): ?>
+                    <li>
+                        <div class="crop-wrapper">
+                            <div class="wide-wrapper">
+                                <div class="image-wrapper mobile-image">
+                                    <img src="<?php echo $mobile_image['url']; ?>" alt="<?php echo $mobile_image['alt']; ?>" />
                                 </div>
                             </div>
                         </div>

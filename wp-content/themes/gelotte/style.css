@@ -280,6 +280,16 @@ div.image-wrapper > img {
   left: auto;
   right: 20px;
 }
+/* This removes the extraneous items when in mobile view */
+a.unslider-arrow.prev {
+  display: none;
+}
+a.unslider-arrow.next {
+  display: none;
+}
+nav.unslider-nav ol li {
+  display: none;
+}
 /* Footer styles
 -------------------------------------------------- */
 .footer {
