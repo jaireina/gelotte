@@ -16,6 +16,7 @@ get_header();
     $images = get_field('desktop_gallery');
 
     if( $images ): ?>
+        <div class="the-slider">
             <ul>
                 <?php foreach( $images as $image ): ?>
                     <li>
