@@ -40,6 +40,20 @@ body {
   height: 0;
   background-color: red;
 }
+.page-template-the-rest-page {
+  height: 100vh;
+}
+.page-template-the-rest-page #top-content-wrapper {
+  position: relative;
+  top: 0;
+  height: 100%;
+}
+.page-template-the-rest-page #bottom-content-wrapper {
+  position: relative;
+  bottom: 0;
+  height: 0;
+  background-color: red;
+}
 .single-project {
   height: 200vh;
 }
