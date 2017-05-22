@@ -15,67 +15,33 @@ get_header();
 
             <div class="row nopadding">
 
-                <div class="respheight col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="respheight grid-nine-top col-sm-12">
 
-                    <div class="col-sm-4 ">
-                        <div class="crop-wrapper">
+                    <div class="col-sm-4">
+                        <div class="crop-wrapper left">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    1
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-4 ">
-                        <div class="crop-wrapper">
+                    <div class="col-sm-4">
+                        <div class="crop-wrapper middle">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    2
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-4 ">
-                        <div class="crop-wrapper">
+                    <div class="col-sm-4">
+                        <div class="crop-wrapper right">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    3
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="respheight col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                    <div class="col-sm-4 ">
-                        <div class="crop-wrapper">
-                            <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    1
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 ">
-                        <div class="crop-wrapper">
-                            <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    2
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 ">
-                        <div class="crop-wrapper">
-                            <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    3
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
                                 </div>
                             </div>
                         </div>
@@ -83,37 +49,73 @@ get_header();
 
                 </div>
 
-                <div class="respheight col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="respheight grid-nine-middle col-sm-12">
 
-                    <div class="col-sm-4 ">
-                        <div class="crop-wrapper">
+                    <div class="col-sm-4">
+                        <div class="crop-wrapper left">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    1
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-4 ">
-                        <div class="crop-wrapper">
+                    <div class="col-sm-4">
+                        <div class="crop-wrapper middle">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    2
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-4 ">
-                        <div class="crop-wrapper">
+                    <div class="col-sm-4">
+                        <div class="crop-wrapper right">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    3
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                </div>
+
+                <div class="respheight grid-nine-bottom col-sm-12">
+
+                    <div class="col-sm-4">
+                        <div class="crop-wrapper left">
+                            <div class="wide-wrapper">
+                                <div class="grid-nine-image-wrapper">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="crop-wrapper middle">
+                            <div class="wide-wrapper">
+                                <div class="grid-nine-image-wrapper">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="crop-wrapper right">
+                            <div class="wide-wrapper">
+                                <div class="grid-nine-image-wrapper">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
                 </div>
 

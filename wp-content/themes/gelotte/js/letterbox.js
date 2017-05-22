@@ -51,6 +51,10 @@ function setImageVertical() {
         setProjectTopWrapper();
     }
 
+    if ( typeof setGridNine !== 'undefined' && jQuery( window.setGridNine ) ) {
+        setGridNine();
+    }
+
     var top_content_wrapper_height = jQuery('#top-content-wrapper').height();
     var image_height;
 

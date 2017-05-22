@@ -30,6 +30,12 @@ function get_social_icons() {
 function ghd_add_scripts() {
 
     if ( !is_admin() ) {
+
+        if ( is_page( 'the-rest' ) || is_page( 'our-work' ) ) {
+            wp_register_script('grid-nine-setup', get_stylesheet_directory_uri() . '/js/gridNineSetup.js', array('jquery'), '0.1');
+            wp_enqueue_script('grid-nine-setup');
+        }
+
         wp_register_script('jPushMenu', get_stylesheet_directory_uri() . '/js/jPushMenu.js', array('jquery'), '1.1.1');
         wp_enqueue_script('jPushMenu');
         wp_register_script('Letterbox', get_stylesheet_directory_uri() . '/js/letterbox.js', array('jquery'), '1.0');
