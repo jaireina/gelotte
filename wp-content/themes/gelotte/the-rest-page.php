@@ -20,8 +20,8 @@ get_header();
                     <div class="col-sm-4">
                         <div class="crop-wrapper left">
                             <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                <div class="grid-nine-image-wrapper-top">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rest-image-placeholder-1-500x335.png"/>
                                 </div>
                             </div>
                         </div>
@@ -30,8 +30,8 @@ get_header();
                     <div class="col-sm-4">
                         <div class="crop-wrapper middle">
                             <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                <div class="grid-nine-image-wrapper-middle">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rest-image-placeholder-2-500x335.png"/>
                                 </div>
                             </div>
                         </div>
@@ -40,8 +40,8 @@ get_header();
                     <div class="col-sm-4">
                         <div class="crop-wrapper right">
                             <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                <div class="grid-nine-image-wrapper-bottom">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rest-image-placeholder-5-500x335.png"/>
                                 </div>
                             </div>
                         </div>
@@ -54,8 +54,8 @@ get_header();
                     <div class="col-sm-4">
                         <div class="crop-wrapper left">
                             <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                <div class="grid-nine-image-wrapper-top">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rest-image-placeholder-6-500x335.png"/>
                                 </div>
                             </div>
                         </div>
@@ -64,8 +64,8 @@ get_header();
                     <div class="col-sm-4">
                         <div class="crop-wrapper middle">
                             <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                <div class="grid-nine-image-wrapper-middle">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rest-image-placeholder-3-500x335.png"/>
                                 </div>
                             </div>
                         </div>
@@ -74,8 +74,8 @@ get_header();
                     <div class="col-sm-4">
                         <div class="crop-wrapper right">
                             <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                <div class="grid-nine-image-wrapper-bottom">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rest-image-placeholder-4-500x335.png"/>
                                 </div>
                             </div>
                         </div>
@@ -88,8 +88,8 @@ get_header();
                     <div class="col-sm-4">
                         <div class="crop-wrapper left">
                             <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                <div class="grid-nine-image-wrapper-top">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rest-image-placeholder-7-500x335.png"/>
                                 </div>
                             </div>
                         </div>
@@ -98,8 +98,8 @@ get_header();
                     <div class="col-sm-4">
                         <div class="crop-wrapper middle">
                             <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                <div class="grid-nine-image-wrapper-middle">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rest-image-placeholder-8-500x335.png"/>
                                 </div>
                             </div>
                         </div>
@@ -108,8 +108,8 @@ get_header();
                     <div class="col-sm-4">
                         <div class="crop-wrapper right">
                             <div class="wide-wrapper">
-                                <div class="grid-nine-image-wrapper">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide09-33.jpg"/>
+                                <div class="grid-nine-image-wrapper-bottom">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/rest-image-placeholder-9-500x335.png"/>
                                 </div>
                             </div>
                         </div>
