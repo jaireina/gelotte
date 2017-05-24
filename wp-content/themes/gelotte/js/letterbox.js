@@ -31,7 +31,7 @@ function setMaxWidth() {
     var document_width = jQuery(document).width();
     var window_height = jQuery(window).height();
 
-    var top_content_wrapper_height = jQuery('#top-content-wrapper').height();
+    // var top_content_wrapper_height = jQuery('#top-content-wrapper').height();
 
     var header_height = jQuery('.main-navigation').height();
     var footer_height = jQuery('.footer').height();

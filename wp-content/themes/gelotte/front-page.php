@@ -15,10 +15,10 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="image-wrapper desktop-image">
-                                        <img src="<?php the_field('desktop_image'); ?>" alt="" />
+                                    <img src="<?php $desktop_image = get_field('desktop_image'); echo $desktop_image['url']; ?>" alt="<?php echo $desktop_image['alt'] ?>" />
                                 </div>
                                 <div class="image-wrapper mobile-image">
-                                        <img src="<?php the_field('mobile_image'); ?>" alt="" />
+                                    <img src="<?php $mobile_image = get_field('mobile_image'); echo $mobile_image['url']; ?>" alt="<?php echo $mobile_image['alt'] ?>" />
                                 </div>
                             </div>
                         </div>

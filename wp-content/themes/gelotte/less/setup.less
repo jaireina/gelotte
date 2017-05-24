@@ -48,6 +48,23 @@ body {
   }
 }
 
+.page-template-our-work-page {
+  height: 100vh;
+}
+.page-template-our-work-page {
+  #top-content-wrapper {
+    position: relative;
+    top: 0;
+    height: 100%;
+  }
+  #bottom-content-wrapper {
+    position: relative;
+    bottom: 0;
+    height: 0;
+    background-color: red;
+  }
+}
+
 .single-project {
   height: 200vh;
 }
@@ -75,11 +92,6 @@ h1, h2, h3, h4, h5 {
   padding: 0;
 }
 
-.respheight {
-  padding-left: 0;
-  padding-right: 0;
-  //padding-bottom: 15px;
-}
 .grid-nine-top {
   padding-bottom: 12.5px;
 }
@@ -99,4 +111,8 @@ h1, h2, h3, h4, h5 {
 }
 .right {
   padding-left: 12.5px;
+}
+.cropwrapper.left, .cropwrapper.middle, .cropwrapper.right {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
