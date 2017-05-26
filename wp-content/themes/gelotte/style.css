@@ -276,6 +276,21 @@ div.image-wrapper > img {
   height: 0;
   background-color: red;
 }
+/* Testing */
+.page-template-page-test-page {
+  height: 100vh;
+}
+.page-template-page-test-page #top-content-wrapper {
+  position: relative;
+  top: 0;
+  height: 100%;
+}
+.page-template-page-test-page #bottom-content-wrapper {
+  position: relative;
+  bottom: 0;
+  height: 0;
+  background-color: red;
+}
 /* Grid Nine styles
 -------------------------------------------------- */
 .grid-nine-col {
