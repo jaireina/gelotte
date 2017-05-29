@@ -21,7 +21,21 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    <img class="image-1-1" src="<?php echo get_stylesheet_directory_uri() ?>/images/our-work-image-placeholder-0-500x335.png"/>
+                                    <?php
+                                    $post_object = get_field('top_left');
+                                    if( $post_object ):
+
+                                        // override $post
+                                        $post = $post_object;
+                                        setup_postdata( $post );
+                                        $gallery_images = get_field('desktop_gallery');
+
+                                        ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img class="image-1-1" src="<?php echo $gallery_images[0]['url']; ?>" />
+                                        </a>
+                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +45,21 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    <img class="image-1-2" src="<?php echo get_stylesheet_directory_uri() ?>/images/our-work-image-placeholder-0-500x335.png"/>
+                                    <?php
+                                    $post_object = get_field('top_middle');
+                                    if( $post_object ):
+
+                                        // override $post
+                                        $post = $post_object;
+                                        setup_postdata( $post );
+                                        $gallery_images = get_field('desktop_gallery');
+
+                                        ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img class="image-1-2" src="<?php echo $gallery_images[0]['url']; ?>" />
+                                        </a>
+                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -41,7 +69,21 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    <img class="image-1-3" src="<?php echo get_stylesheet_directory_uri() ?>/images/our-work-image-placeholder-0-500x335.png"/>
+                                    <?php
+                                    $post_object = get_field('top_right');
+                                    if( $post_object ):
+
+                                        // override $post
+                                        $post = $post_object;
+                                        setup_postdata( $post );
+                                        $gallery_images = get_field('desktop_gallery');
+
+                                        ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img class="image-1-3" src="<?php echo $gallery_images[0]['url']; ?>" />
+                                        </a>
+                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +97,21 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    <img class="image-2-1" src="<?php echo get_stylesheet_directory_uri() ?>/images/our-work-image-placeholder-0-500x335.png"/>
+                                    <?php
+                                    $post_object = get_field('middle_left');
+                                    if( $post_object ):
+
+                                        // override $post
+                                        $post = $post_object;
+                                        setup_postdata( $post );
+                                        $gallery_images = get_field('desktop_gallery');
+
+                                        ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img class="image-2-1" src="<?php echo $gallery_images[0]['url']; ?>" />
+                                        </a>
+                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +121,21 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    <img class="image-2-2" src="<?php echo get_stylesheet_directory_uri() ?>/images/our-work-image-placeholder-0-500x335.png"/>
+                                    <?php
+                                    $post_object = get_field('middle_middle');
+                                    if( $post_object ):
+
+                                        // override $post
+                                        $post = $post_object;
+                                        setup_postdata( $post );
+                                        $gallery_images = get_field('desktop_gallery');
+
+                                        ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img class="image-2-2" src="<?php echo $gallery_images[0]['url']; ?>" />
+                                        </a>
+                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +145,21 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    <img class="image-2-3" src="<?php echo get_stylesheet_directory_uri() ?>/images/our-work-image-placeholder-0-500x335.png"/>
+                                    <?php
+                                    $post_object = get_field('middle_right');
+                                    if( $post_object ):
+
+                                        // override $post
+                                        $post = $post_object;
+                                        setup_postdata( $post );
+                                        $gallery_images = get_field('desktop_gallery');
+
+                                        ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img class="image-2-3" src="<?php echo $gallery_images[0]['url']; ?>" />
+                                        </a>
+                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +173,21 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    <img class="image-3-1" src="<?php echo get_stylesheet_directory_uri() ?>/images/our-work-image-placeholder-0-500x335.png"/>
+                                    <?php
+                                    $post_object = get_field('bottom_left');
+                                    if( $post_object ):
+
+                                        // override $post
+                                        $post = $post_object;
+                                        setup_postdata( $post );
+                                        $gallery_images = get_field('desktop_gallery');
+
+                                        ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img class="image-3-1" src="<?php echo $gallery_images[0]['url']; ?>" />
+                                        </a>
+                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +197,21 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    <img class="image-3-2" src="<?php echo get_stylesheet_directory_uri() ?>/images/our-work-image-placeholder-0-500x335.png"/>
+                                    <?php
+                                    $post_object = get_field('bottom_middle');
+                                    if( $post_object ):
+
+                                        // override $post
+                                        $post = $post_object;
+                                        setup_postdata( $post );
+                                        $gallery_images = get_field('desktop_gallery');
+
+                                        ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img class="image-3-2" src="<?php echo $gallery_images[0]['url']; ?>" />
+                                        </a>
+                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +221,21 @@ get_header();
                         <div class="crop-wrapper">
                             <div class="wide-wrapper">
                                 <div class="grid-nine-image-wrapper">
-                                    <img class="image-3-3" src="<?php echo get_stylesheet_directory_uri() ?>/images/our-work-image-placeholder-0-500x335.png"/>
+                                    <?php
+                                    $post_object = get_field('bottom_right');
+                                    if( $post_object ):
+
+                                        // override $post
+                                        $post = $post_object;
+                                        setup_postdata( $post );
+                                        $gallery_images = get_field('desktop_gallery');
+
+                                        ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img class="image-3-3" src="<?php echo $gallery_images[0]['url']; ?>" />
+                                        </a>
+                                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

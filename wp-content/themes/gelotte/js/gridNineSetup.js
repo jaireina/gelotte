@@ -28,7 +28,7 @@ function setGridNineImageVertical() {
 
     jQuery('.image-2-1').css( 'margin-top', ( ( grid_nine_image_wrapper_height - image_2_1_height ) / 2 ) );
     jQuery('.image-2-2').css( 'margin-top', ( ( grid_nine_image_wrapper_height - image_2_2_height ) / 2 ) );
-    jQuery('.image-3-3').css( 'margin-top', ( ( grid_nine_image_wrapper_height - image_3_3_height ) / 2 ) );
+    jQuery('.image-2-3').css( 'margin-top', ( ( grid_nine_image_wrapper_height - image_2_3_height ) / 2 ) );
 
     jQuery('.image-3-1').css( 'margin-top', ( ( grid_nine_image_wrapper_height - image_3_1_height ) / 2 ) );
     jQuery('.image-3-2').css( 'margin-top', ( ( grid_nine_image_wrapper_height - image_3_2_height ) / 2 ) );

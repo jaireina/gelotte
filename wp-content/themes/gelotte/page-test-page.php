@@ -10,30 +10,32 @@ get_header();
 
     <!-- Begin Content -->
     <div id="top-content-wrapper">
-
-        <h1>This is the Test Page</h1>
         <?php
 
-        $post_object = get_field('test_field');
+        $post_object = get_field('project_field');
 
         if( $post_object ):
 
             // override $post
             $post = $post_object;
             setup_postdata( $post );
+            $url =
+            $gallery_images = get_field('desktop_gallery');
 
             ?>
-            <div>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            </div>
+            <a href="<?php the_permalink(); ?>">
+                <img src="<?php echo $gallery_images[0]['sizes']['large']; ?>" />
+    </a>
+
             <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         <?php endif; ?>
 
     </div><!-- End Top Content Wrapper -->
 
-    <div id="bottom-content-wrapper">
-
-    </div><!-- End Bottom Content Wrapper -->
-
     <!-- BEGIN FOOTER TEMPLATE SECTION -->
 <?php get_footer(); ?>
+
+
+<?php $gallery_images = get_field('desktop_gallery'); ?>
+
+<img src="<?php echo $gallery_images[0]['url']; ?>" />
