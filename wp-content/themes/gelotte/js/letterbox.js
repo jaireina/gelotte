@@ -22,7 +22,6 @@ jQuery(window).resize(function() {
         jQuery( '.footer' ).css('max-width', letterbox );
 
         jQuery( '.image-wrapper>img').css('margin-top', setImageVertical() );
-        jQuery( '.image-wrapper>img').css('margin-top', setImageVertical() );
     }, 500);
 });
 
@@ -31,8 +30,6 @@ function setMaxWidth() {
 
     var document_width = jQuery(document).width();
     var window_height = jQuery(window).height();
-
-    // var top_content_wrapper_height = jQuery('#top-content-wrapper').height();
 
     var header_height = jQuery( '.main-navigation' ).height();
     var footer_height = jQuery( '.footer' ).height();
